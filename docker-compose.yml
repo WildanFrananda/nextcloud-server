@@ -31,7 +31,7 @@ services:
       - db
       - redis
     volumes:
-      - ./nextcloud_data:/var/www/html
+      - /home/wildan-frananda/nextcloud-storage/nextcloud_data:/var/www/html
     environment:
       - POSTGRES_HOST=db
       - POSTGRES_DB=${POSTGRES_DB}
