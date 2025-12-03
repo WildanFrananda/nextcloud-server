@@ -1,4 +1,11 @@
 services:
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel run --protocol http2
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+
   db:
     image: postgres:18-alpine
     restart: always
