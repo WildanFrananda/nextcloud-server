@@ -38,6 +38,8 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - REDIS_HOST=redis
+      - PHP_MEMORY_LIMIT=1024M
+      - PHP_UPLOAD_LIMIT=10G
     depends_on:
       - db
       - redis
