@@ -5,6 +5,8 @@ services:
     command: tunnel run --protocol http2
     environment:
       - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    depends_on:
+      - app
 
   db:
     image: postgres:18-alpine
